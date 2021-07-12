@@ -12,6 +12,6 @@ interface EqDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertAll(earthquakes: MutableList<Earthquake>)
 
-    @Query("select * from eq_table")
+    @Query("SELECT * FROM eq_table")
     fun getEarthquakes(): LiveData<MutableList<Earthquake>>
 }
